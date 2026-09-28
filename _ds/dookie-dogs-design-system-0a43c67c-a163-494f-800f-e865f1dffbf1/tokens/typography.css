@@ -1,0 +1,40 @@
+/* ============================================================
+   Dookie Dogs — Typography tokens
+   Display = Anton (condensed, uppercase, slanted like the logo).
+   Text/UI  = Archivo.
+   ============================================================ */
+:root {
+  --font-display: 'Anton', 'Arial Narrow', sans-serif;
+  --font-text:    'Archivo', system-ui, -apple-system, sans-serif;
+
+  /* Display headlines are ALWAYS uppercase + tight */
+  --display-transform: uppercase;      /* @kind other */
+  --display-tracking:  0.01em;         /* @kind other */
+  --display-leading:   0.92;           /* @kind other */
+  --display-slant:     -6deg;          /* @kind other */ /* transform: skewX() on hero marks */
+
+  /* Weights (Archivo) */
+  --fw-regular: 400;   /* @kind other */
+  --fw-medium:  500;   /* @kind other */
+  --fw-semibold:600;   /* @kind other */
+  --fw-bold:    700;   /* @kind other */
+  --fw-heavy:   800;   /* @kind other */
+
+  /* Type scale (px in rem) */
+  --fs-display-xxl: 6rem;      /* 96 — hero mark            */
+  --fs-display-xl:  4.25rem;   /* 68 — page headline        */
+  --fs-display-lg:  3rem;      /* 48 — section headline     */
+  --fs-display-md:  2.125rem;  /* 34 — sub-headline         */
+
+  --fs-title:   1.5rem;    /* 24 — card titles (Archivo 800)*/
+  --fs-lg:      1.25rem;   /* 20 */
+  --fs-body:    1.0625rem; /* 17 — default body             */
+  --fs-sm:      0.9375rem; /* 15 */
+  --fs-xs:      0.8125rem; /* 13 — labels, eyebrows         */
+
+  --lh-tight:  1.05;   /* @kind other */
+  --lh-snug:   1.25;   /* @kind other */
+  --lh-body:   1.6;    /* @kind other */
+
+  --eyebrow-tracking: 0.16em;  /* @kind other */
+}

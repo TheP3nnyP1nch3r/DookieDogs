@@ -1,0 +1,31 @@
+/* ============================================================
+   Dookie Dogs — component interaction states
+   (hover / press / focus that inline styles can't express)
+   ============================================================ */
+
+/* Buttons */
+.dd-btn:focus-visible { outline: 3px solid var(--dd-ink); outline-offset: 2px; }
+.dd-btn--primary:hover:not(:disabled) { background: var(--dd-yellow-deep) !important; }
+.dd-btn--ink:hover:not(:disabled)     { filter: brightness(1.18); }
+.dd-btn--outline:hover:not(:disabled) { background: var(--dd-ink) !important; color: var(--dd-white) !important; }
+.dd-btn--ghost:hover:not(:disabled)   { background: var(--dd-sand) !important; }
+.dd-btn:active:not(:disabled)         { transform: scale(0.97); }
+/* sticker press: shadow collapses and the button drops onto the page */
+.dd-btn--sticker:active:not(:disabled){ transform: translate(4px,4px) scale(1); box-shadow: 0 0 0 var(--dd-ink) !important; }
+
+/* Icon buttons */
+.dd-iconbtn { transition: background var(--dur), transform var(--dur) var(--ease-bounce); }
+.dd-iconbtn:hover  { background: var(--dd-sand); }
+.dd-iconbtn:active { transform: scale(0.92); }
+.dd-iconbtn--solid:hover  { background: var(--dd-yellow-deep); }
+
+/* Cards that are interactive */
+.dd-card--link { transition: transform var(--dur) var(--ease-out), box-shadow var(--dur); cursor: pointer; }
+.dd-card--link:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+/* Inputs */
+.dd-input:focus { outline: none; border-color: var(--dd-ink) !important; box-shadow: 0 0 0 3px var(--dd-yellow-soft); }
+
+@media (prefers-reduced-motion: reduce) {
+  .dd-btn, .dd-iconbtn, .dd-card--link { transition: none; }
+}

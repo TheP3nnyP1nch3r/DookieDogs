@@ -1,0 +1,53 @@
+/* ============================================================
+   Dookie Dogs — Color tokens
+   Brand yellow + confident black. Warm, friendly, high-contrast.
+   ============================================================ */
+:root {
+  /* --- Brand ------------------------------------------------ */
+  --dd-yellow:        #FEC800;  /* the one. Signs, buckets, logo. */
+  --dd-yellow-deep:   #E9B500;  /* hover / pressed on yellow      */
+  --dd-yellow-soft:   #FFE58A;  /* tints, highlights              */
+  --dd-yellow-wash:   #FFF6D6;  /* pale fill behind content       */
+
+  /* --- Ink (near-black, never pure #000 for large fields) --- */
+  --dd-ink:           #171512;  /* headings, primary text         */
+  --dd-ink-2:         #3A3630;  /* body text                      */
+  --dd-ink-3:         #6E6860;  /* muted / captions               */
+  --dd-black:         #000000;  /* logo lockup, hard accents      */
+
+  /* --- Neutrals / warm paper -------------------------------- */
+  --dd-white:         #FFFFFF;
+  --dd-paper:         #FBF9F4;  /* warm off-white page bg         */
+  --dd-sand:          #F1ECE1;  /* section fill, dividers         */
+  --dd-line:          #E4DED2;  /* hairline borders               */
+  --dd-line-strong:   #C9C1B2;
+
+  /* --- Support (used sparingly, from real photos/reviews) --- */
+  --dd-grass:         #4C7A34;  /* "clean yard" / success accents */
+  --dd-star:          #F5A623;  /* review stars (amber)           */
+
+  /* ============================================================
+     Semantic aliases — reference these in components
+     ============================================================ */
+  --color-bg:              var(--dd-paper);
+  --color-surface:         var(--dd-white);
+  --color-surface-sunk:    var(--dd-sand);
+  --color-surface-brand:   var(--dd-yellow);
+  --color-surface-ink:     var(--dd-ink);
+
+  --text-heading:          var(--dd-ink);
+  --text-body:             var(--dd-ink-2);
+  --text-muted:            var(--dd-ink-3);
+  --text-on-brand:         var(--dd-black);   /* black text on yellow */
+  --text-on-ink:           var(--dd-white);
+
+  --border-hairline:       var(--dd-line);
+  --border-strong:         var(--dd-line-strong);
+  --border-ink:            var(--dd-ink);
+
+  --focus-ring:            var(--dd-ink);
+
+  /* Links */
+  --link:                  var(--dd-ink);
+  --link-hover:            var(--dd-yellow-deep);
+}
