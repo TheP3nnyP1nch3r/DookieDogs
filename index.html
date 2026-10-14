@@ -3,13 +3,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dog Poop Removal in Bowling Green, KY | Dookie Dogs</title>
-<meta name="description" content="Weekly dog poop removal for busy Bowling Green dog owners. Check your area and see your exact price in about 60 seconds.">
+<meta name="description" content="Keep your yard clean without adding another chore. Dookie Dogs provides reliable weekly and biweekly dog poop removal in Bowling Green, Kentucky.">
 <link rel="canonical" href="https://www.dookiedogs.com/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23FEC800'/%3E%3Ctext x='50' y='60' font-family='Arial Black,sans-serif' font-size='34' font-weight='900' fill='%23000' text-anchor='middle' transform='skewX(-6)'%3EDD%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.dookiedogs.com/">
 <meta property="og:title" content="Dog Poop Removal in Bowling Green, KY | Dookie Dogs">
-<meta property="og:description" content="Check your area and see your exact price in about 60 seconds.">
+<meta property="og:description" content="Keep your yard clean without adding another chore. Dookie Dogs provides reliable weekly and biweekly dog poop removal in Bowling Green, Kentucky.">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Dookie Dogs","telephone":"+1-270-266-1818","email":"dookiedogs.llc@gmail.com","areaServed":["Bowling Green, KY","Alvaton, KY","Franklin, KY","Auburn, KY","Rockfield, KY"],"address":{"@type":"PostalAddress","addressLocality":"Bowling Green","addressRegion":"KY"}}
@@ -243,18 +243,22 @@
   section { position:relative; }
 
   /* promo banner */
-  .promo-bar { background:var(--dd-ink); color:var(--dd-yellow); text-align:center; padding:9px 16px; font-weight:800; font-size:13px; letter-spacing:.01em; position:relative; z-index:61; }
+  .promo-bar { background:var(--dd-ink); color:#fff; text-align:left; padding:6px 16px; font-weight:800; font-size:13px; letter-spacing:.04em; position:relative; z-index:61; }
+  .promo-bar-inner { padding-left:0; display:flex; align-items:center; gap:8px; }
+  .promo-icon-pulse { display:inline-flex; animation:promo-pulse 1.6s ease-in-out infinite; }
+  @keyframes promo-pulse { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.55; transform:scale(1.15); } }
+  @media (prefers-reduced-motion:reduce){ .promo-icon-pulse{ animation:none; } }
   .promo-peek { position:absolute; left:18px; bottom:-2px; width:46px; height:auto; z-index:62; pointer-events:none; }
   @media (max-width:560px){ .promo-peek{ display:none; } }
   .promo-bar strong { color:#fff; }
-  .promo-bar .close { position:absolute; right:14px; top:50%; transform:translateY(-50%); background:none; border:0; color:var(--dd-yellow); opacity:.7; cursor:pointer; padding:4px; line-height:0; }
+  .promo-bar .close { position:absolute; right:14px; top:50%; transform:translateY(-50%); background:none; border:0; color:#fff; opacity:.7; cursor:pointer; padding:4px; line-height:0; }
   .promo-bar .close:hover { opacity:1; }
   @media (max-width:640px){ .promo-bar { font-size:12px; padding:8px 34px; } }
 
   /* header */
   .hdr { position:sticky; top:-1px; z-index:60; background:var(--dd-yellow); transition:box-shadow .2s; }
   .hdr.stuck { box-shadow:0 2px 0 rgba(0,0,0,.15); }
-  .hdr-in { display:flex; align-items:center; justify-content:space-between; min-height:72px; gap:14px; padding:10px 0; }
+  .hdr-in { display:flex; align-items:center; justify-content:space-between; min-height:72px; gap:14px; padding-top:4px; padding-bottom:4px; }
   .hdr .logo-text { font-family:var(--font-display); text-transform:uppercase; color:#000; line-height:1; font-size:24px; letter-spacing:.01em; margin:0; }
   .hdr-nav { display:flex; align-items:center; gap:22px; }
   .hdr-nav a.navlink { font-weight:700; font-size:14px; color:#1c1a15; }
@@ -262,7 +266,7 @@
   .hdr .txt { display:inline-flex; align-items:center; gap:6px; font-weight:700; color:#1c1a15; font-size:13.5px; }
   @media (max-width:820px){ .hdr-nav a.navlink, .hdr .txt { display:none; } }
   @media (max-width:420px){ .hdr .logo-text{ font-size:19px; } .hdr-in{ min-height:60px; } }
-  .brand-word{ font-size:clamp(30px,9.5vw,61.272px) !important; display:inline-block; margin-left:22px; }
+  .brand-word{ font-size:clamp(30px,9.5vw,61.272px) !important; display:inline-block; margin-left:0; }
 
   /* trust strip */
   .trust-strip { background:var(--dd-white); padding:12px 0; }
@@ -272,11 +276,11 @@
   .trust-in a { color:var(--dd-ink); text-decoration:underline; }
 
   /* hero */
-  .hero { background:var(--dd-yellow); overflow:hidden; padding:44px 0 76px; position:relative; }
+  .hero { background:var(--dd-yellow); overflow:hidden; padding:44px 0 56px; position:relative; }
   .hero .container { position:relative; z-index:1; }
   .hero-grid { display:grid; grid-template-columns:1fr 1.14fr; gap:26px 48px; align-items:start; grid-template-areas:"copy form"; }
-  .hero-copy { grid-area:copy; align-self:center; }
-  .hero-form { grid-area:form; align-self:center; position:relative; }
+  .hero-copy { grid-area:copy; align-self:start; }
+  .hero-form { grid-area:form; align-self:start; position:relative; }
   .hero .eyebrow { color:#4a4335; }
   .hero h1 { font-size:clamp(38px,4.6vw,62px); color:#000; margin-top:14px; }
   .hero .sub { font-size:17px; line-height:1.55; color:#231f18; max-width:500px; font-weight:500; margin-top:16px; }
@@ -286,6 +290,8 @@
   .proofrow i { color:#000; flex-shrink:0; }
   .proofrow a { color:#231f18; font-weight:600; text-decoration:underline; text-underline-offset:2px; }
   .hero-proof-row { display:flex; align-items:center; gap:20px; margin-top:22px; }
+  .hero-owner-photo-wrap { width:300px; margin:28px auto 0; transform:translateX(-48px); border-radius:20px; overflow:hidden; box-shadow:0 18px 40px -16px rgba(23,21,18,.35); }
+  .hero-owner-photo-wrap img { display:block; width:100%; height:300px; object-fit:fill; object-position:50% 50%; background:#fff; }
   .hero-photo-card { width:120px; height:150px; flex-shrink:0; border:3px solid #000; border-radius:14px; overflow:hidden; box-shadow:7px 7px 0 #000; transform:rotate(-4deg); background:#fff; }
   .hero-photo-card img { display:block; width:100%; height:100%; object-fit:cover; object-position:30% 72%; }
   .hero-form-badge { position:absolute; top:-46px; right:0; width:74px; height:74px; border-radius:50%; border:3px solid #000; overflow:hidden; box-shadow:5px 5px 0 #000; transform:rotate(7deg); z-index:5; background:#fff; }
@@ -294,7 +300,7 @@
   .hero-cta-row .textty { font-weight:700; font-size:14px; color:#231f18; text-decoration:underline; }
 
   /* quote card */
-  .qcard { background:var(--dd-white); border:3px solid #000; border-radius:22px; box-shadow:10px 10px 0 rgba(0,0,0,.3); padding:26px; }
+  .qcard { background:var(--dd-white); border:3px solid #000; border-radius:22px; box-shadow:10px 10px 0 rgba(0,0,0,.3); padding:20px 26px 10px; min-height:0; display:flex; flex-direction:column; justify-content:center; }
   .qhead { margin-bottom:6px; }
   .qdots { display:flex; gap:4px; margin-bottom:12px; padding-right:58px; }
   .qwarn { display:flex; gap:10px; align-items:flex-start; background:#FFF4D6; border:2px solid #E6B400; border-radius:12px; padding:12px 14px; margin-top:14px; font-size:13.5px; line-height:1.5; color:#3D2F00; }
@@ -307,7 +313,7 @@
   .qstep { font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:.1em; color:var(--dd-ink-3); }
   .qcard h2 { font-family:var(--font-display); text-transform:uppercase; font-size:25px; color:var(--dd-ink); margin:8px 0 0; line-height:1.05; }
   .qsub { font-size:14.5px; line-height:1.5; color:var(--dd-ink-2); margin:8px 0 0; }
-  .fld { display:flex; flex-direction:column; gap:6px; margin-top:14px; }
+  .fld { display:flex; flex-direction:column; gap:6px; margin-top:10px; }
   .fld label { font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; color:var(--dd-ink-2); }
   .fld input, .fld select { font-family:var(--font-text); font-size:16px; color:var(--dd-ink); background:var(--dd-white); border:2px solid var(--dd-line); border-radius:12px; padding:12px 13px; width:100%; min-height:44px; }
   .fld input:focus, .fld select:focus { outline:none; border-color:#000; box-shadow:0 0 0 3px var(--dd-yellow-soft); }
@@ -344,6 +350,11 @@
   .schd-t { display:block; font-family:var(--font-display); text-transform:uppercase; font-size:21px; color:var(--dd-ink); line-height:1; }
   .schd-d { display:block; font-size:14px; line-height:1.5; color:var(--dd-ink-2); margin-top:8px; }
   .schd-go { display:inline-flex; align-items:center; gap:6px; font-weight:800; font-size:13.5px; color:var(--dd-ink); margin-top:12px; }
+  .schd.compact { margin-top:26px; }
+  .schd.compact.feat { margin-top:18px; }
+  .schd.compact .schd-t { font-size:16px; margin-top:10px; }
+  .schd.compact .schd-d { font-size:12.5px; margin-top:3px; }
+  .schd.compact .schd-go { margin-top:6px; font-size:12px; }
   .pricebox { background:var(--dd-sand); border-radius:16px; padding:22px; text-align:center; margin-top:16px; }
   .pv b { font-family:var(--font-display); font-size:48px; color:var(--dd-ink); line-height:1; display:block; white-space:nowrap; }
   .pv b .cur { font-size:28px; vertical-align:top; line-height:1.2; margin-right:1px; }
@@ -373,10 +384,20 @@
   .sec-head p { font-size:17px; margin-top:14px; color:var(--dd-ink-2); line-height:1.6; }
 
   .rgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .reviews-marquee { overflow:hidden; padding:4px 0; -webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent); mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent); }
+  .reviews-track { display:flex; gap:22px; width:max-content; animation:reviews-scroll 48s linear infinite; }
+  .reviews-marquee:hover .reviews-track { animation-play-state:paused; }
+  .review-card-wrap { width:340px; flex-shrink:0; display:flex; }
+  .review-card-wrap > * { flex:1; }
+  @keyframes reviews-scroll { from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+  @media (max-width:900px){ .review-card-wrap{ width:280px; } }
+  @media (prefers-reduced-motion:reduce){ .reviews-track{ animation:none; } }
   .proofline { text-align:center; margin-top:30px; font-size:14.5px; font-weight:700; color:var(--dd-ink-2); }
   .proofline a { color:var(--dd-ink); text-decoration:underline; }
 
   .plans { display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:900px; margin:0 auto; align-items:stretch; }
+  .plans-mascot { position:absolute; left:max(10px, calc(50% - 590px)); bottom:0; width:125px; height:auto; z-index:2; pointer-events:none; }
+  @media (max-width:1180px){ .plans-mascot{ display:none; } }
   .onetime { text-align:center; margin:34px auto 0; font-size:14.5px; color:var(--dd-ink-3); }
   .onetime button { background:none; border:none; font-family:var(--font-text); font-size:14.5px; font-weight:800; color:var(--dd-ink); text-decoration:underline; cursor:pointer; padding:0; }
 
@@ -463,6 +484,9 @@
     .hero h1{ font-size:clamp(34px,9vw,46px); }
     .hero-proof-row{ display:none; }
     .hero-form-badge{ display:none; }
+    .hero-owner-photo-wrap{ width:190px; margin:18px auto 0; }
+    .hero-owner-photo-wrap img{ height:220px; }
+    .qcard{ min-height:0; }
     .hero-grid{ gap:20px; }
     .steps,.rgrid{ grid-template-columns:1fr; }
     .pgrid{ grid-template-columns:1fr; }
@@ -577,7 +601,7 @@ function PromoBar(){
   function dismiss(){ setOpen(false); try{ sessionStorage.setItem('dd_promo_dismissed','1'); }catch(e){} }
   return (
     <div className="promo-bar">
-      <strong>First standard recurring visit free</strong> when you start weekly or biweekly service. Initial-reset conditions may apply. <a href="#faq" style={{color:'inherit',textDecoration:'underline'}}>See offer details</a> · <a href="#quote" onClick={()=>track('CTAClick',{placement:'promo-bar'})} style={{color:'inherit',textDecoration:'underline'}}>See my price &rarr;</a>
+      <div className="container promo-bar-inner"><span className="promo-icon-pulse">{ic('radio',15)}</span><span>Radio Special - Free Visit When Starting New Service</span></div>
       <button className="close" aria-label="Dismiss" onClick={dismiss}>{ic('x',16)}</button>
     </div>
   );
@@ -600,11 +624,13 @@ function Hero(){
         <a className="txt" href={`sms:${PHONE_RAW}`} onClick={()=>track('Contact',{method:'sms',placement:'header'})}></a>
       </div>
     </div><div className="container hero-grid">
-      <div className="hero-copy">
-        <p className="eyebrow">Bowling Green, KY</p>
+      <div className="hero-copy" style={{position:'relative'}}>
+        <p className="eyebrow">TRUSTED IN 48+ YARDS EACH MONTH</p>
         <h1 className="display">Pooper Scooper Service</h1>
-        <p className="sub">Get your free quote today to get started!</p>
-        <div className="hero-proof-row"></div>
+        <p className="sub">Bowling Green, KY and Surrounding Areas</p>
+        <div className="hero-owner-photo-wrap">
+          <img src="assets/owner-sign-photo.jpg" alt="Ty, Dookie Dogs owner, with a yard sign" />
+        </div>
         <div className="hero-cta-row">
           <a className="textty" href={`sms:${PHONE_RAW}`} onClick={()=>track('Contact',{method:'sms',placement:'hero'})}></a>
         </div>
@@ -628,9 +654,13 @@ function TrustStrip(){
 }
 
 const REVIEWS = [
-  { name:"Amy R.", city:"Bowling Green, KY", tag:"Reliability & thoroughness", text:"We have four dogs and Dookie Dogs keeps our yard clean. The techs are professional and thorough." },
-  { name:"Amber T.", city:"Bowling Green, KY", tag:"Saves time while we're at work", text:"They come while we're at work, text us, and send a photo when they're done. Worth every dollar." },
-  { name:"Barry M.", city:"Bowling Green, KY", tag:"Gate security & communication", text:"Great service and great communication. I never have to wonder whether they came." },
+  { name:"Ben B.", city:"Bowling Green, KY", tag:"8 months and counting", text:"Dookie Dogs has been taking care of our yard for about eight months now, and they've been absolutely fantastic. Dependable, thorough, professional, and consistently leave the yard looking great. Worth every penny." },
+  { name:"Amy P.", city:"Bowling Green, KY", tag:"Four dogs, zero hassle", text:"This is the service I never knew I needed! We have four dogs and an occasional foster pup. Dookie Dogs keeps our yard clean, the cost is minimal and so worth it. The technicians are very professional and thorough." },
+  { name:"Barry W.", city:"Bowling Green, KY", tag:"There when we needed it", text:"Due to an injury we were unable to manage our yard. They jumped in right away to help us out. Would highly recommend and would use them in the future." },
+  { name:"Grey Wolf Management", city:"Bowling Green, KY", tag:"Commercial client", text:"Quick service, reasonably priced. And they made the yard so much neater. I highly recommend Dookie Dogs!" },
+  { name:"Chevy S.", city:"Bowling Green, KY", tag:"Outstanding communication", text:"Great service! Their communication is outstanding and that's important when you have dogs in your backyard." },
+  { name:"Shawnee W.", city:"Bowling Green, KY", tag:"More time in the yard", text:"As someone who enjoys time in my yard with my dogs, I love that this service makes it even more pleasant by removing the stinky mess. Reliable and trustworthy." },
+  { name:"Jordan S.", city:"Bowling Green, KY", tag:"A chore nobody wants", text:"Great idea for a service! A yucky chore that nobody in the household ever wants to do \u2014 a blessing someone else is willing to do the dirty work." },
 ];
 function Reviews(){
   return (
@@ -640,15 +670,17 @@ function Reviews(){
           <h2 className="display">Why local dog owners hand us the chore</h2>
           <p>Reliable visits, clear communication, and a yard that stays usable without taking up your weekend.</p>
         </div>
-        <div className="rgrid">
-          {REVIEWS.map((r,i)=>(
-            <div key={i} className="reveal" style={{display:'flex'}}>
-              <TestimonialCard style={{flex:1}}
-                quote={<React.Fragment><span style={{fontFamily:'var(--font-display)',textTransform:'uppercase',fontSize:'.9em',letterSpacing:'.01em',color:'var(--dd-yellow-deep)',display:'block',marginBottom:6}}>{r.tag}</span>{r.text}</React.Fragment>}
-                name={r.name}
-                location={`Google · ${r.city}`} />
-            </div>
-          ))}
+        <div className="reviews-marquee reveal">
+          <div className="reviews-track">
+            {[...REVIEWS,...REVIEWS].map((r,i)=>(
+              <div key={i} className="review-card-wrap">
+                <TestimonialCard
+                  quote={<React.Fragment><span style={{fontFamily:'var(--font-display)',textTransform:'uppercase',fontSize:'.9em',letterSpacing:'.01em',color:'var(--dd-yellow-deep)',display:'block',marginBottom:6}}>{r.tag}</span>{r.text}</React.Fragment>}
+                  name={r.name}
+                  location={`Google · ${r.city}`} />
+              </div>
+            ))}
+          </div>
         </div>
         <p className="proofline reveal"><a href={GOOGLE} target="_blank" rel="noopener">{RATING} rating &middot; Trusted in 55+ yards each month</a></p>
         <div style={{textAlign:'center',marginTop:26}}><Button variant="ink" size="lg" sticker onClick={seeMyPrice} iconRight={ic('arrow-right')}>Get Your Price In 60 Seconds</Button></div>
@@ -659,7 +691,7 @@ function Reviews(){
 
 function Plans(){
   return (
-    <section className="sec-lg" id="plans" style={{background:'var(--dd-white)'}}><div className="container">
+    <section className="sec-lg" id="plans" style={{background:'var(--dd-white)',position:'relative'}}><img src="assets/mascot-shovel.png" alt="" className="plans-mascot" /><div className="container">
       <div className="sec-head reveal">
         <p className="eyebrow" style={{color:'var(--dd-yellow-deep)'}}>Simple recurring service</p>
         <h2 className="display">Choose how consistently you want the yard handled</h2>
@@ -773,7 +805,7 @@ function VideoSec(){
             {!bad2 && <video controls muted playsInline preload="metadata" src={(window.__resources&&window.__resources.vidScoop)||"assets/video-scooping.mp4"} onError={()=>setBad2(true)}></video>}
             {bad2 && <div className="vplaceholder">{ic('video',28)}<span>Drop the scooping clip here<br/>assets/service-proof-scooping.mp4</span></div>}
           </div>
-          <p className="vcap">Thoroughly scooped everytime</p>
+          <p className="vcap">Grid-like pattern scooping</p>
         </div>
       </div>
     </div></section>
@@ -843,9 +875,9 @@ function Band(){
   return (
     <section className="band"><div className="container">
       <h2 className="display">Your yard can be one less thing on your list.</h2>
-      <p>Check your exact weekly or biweekly price in about 60 seconds. We'll show it on screen and text you a copy.</p>
+      <p>Check your exact weekly or biweekly price in about 60 seconds. We'll show it on screen.</p>
       <Button variant="ink" size="lg" sticker onClick={seeMyPrice} iconRight={ic('arrow-right')}>See My Exact Price</Button>
-      <p className="sup">Mobile number required. Ty may follow up once to help you get started. No long-term contract.</p>
+      <p className="sup"></p>
       <a className="tlink" href={`sms:${PHONE_RAW}`} onClick={()=>track('Contact',{method:'sms',placement:'final'})}>Have a question? Text Ty.</a>
     </div></section>
   );

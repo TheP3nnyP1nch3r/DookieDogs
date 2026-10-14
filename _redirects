@@ -1,0 +1,17 @@
+# Cloudflare Pages redirects — direct, permanent, no chains
+/blank /instantquote 301
+/instant-quote /instantquote 301
+/quotebase /instantquote 301
+/test-quote /instantquote 301
+/book-online /instantquote 301
+/signup /instantquote 301
+/owner / 301
+/near-me /near-you 301
+/copy-of-home /franklin 301
+/copy-of-home-alvaton /rockfield 301
+/copy-of-home-alvaton-1 /auburn 301
+/copy-of-home-auburn /plano 301
+/copy-of-home-franklin /alvaton 301
+/copy-of-home-franklin-1 /woodburn 301
+/copy-of-privacy-policy /referral 301
+/copy-of-referral-15 /freescoop 301

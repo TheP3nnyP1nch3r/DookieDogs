@@ -9,7 +9,7 @@
 const SERVICE_ZIPS = {
   "42101": "Bowling Green", "42102": "Bowling Green", "42103": "Bowling Green",
   "42104": "Bowling Green", "42122": "Alvaton", "42134": "Franklin",
-  "42135": "Franklin", "42206": "Auburn", "42274": "Rockfield",
+  "42135": "Franklin", "42206": "Auburn", "42274": "Rockfield", "42170": "Woodburn",
 };
 const RATES = {
   base:    { Weekly: 20.77, Biweekly: 37.13 },
@@ -42,7 +42,7 @@ function QuoteFlowV3(){
   const [dogs, setDogs] = useState("");
   const [yard, setYard] = useState("");
   const [last, setLast] = useState("");
-  const [freq, setFreq] = useState(null);
+  const [freq, setFreq] = useState('Weekly');
   const [phone, setPhone] = useState("");
   const [err, setErr] = useState("");
   const [wl, setWl] = useState({ name:"", phone:"", done:false });
@@ -210,15 +210,30 @@ function QuoteFlowV3(){
       {/* ---------- SCREEN 1 : SERVICE AREA ---------- */}
       {step===1 && (!area || area.ok) && (
         <form onSubmit={checkArea} noValidate>
-          <Head k="1" t="First, let's make sure we service your area." s="Enter your ZIP code and we'll check it against our active routes." />
+          <Head k="1" t="GET YOUR FREE QUOTE TODAY TO GET STARTED!" s="First, let's make sure we service your area." />
           <div className="fld">
             <Input label="ZIP code" id="q-zip" inputMode="numeric" maxLength="5" value={zip} onFocus={first}
-              onChange={e=>setZip(e.target.value.replace(/\D/g,''))} placeholder="42104, 42101, 42122, etc." autoComplete="postal-code" />
+              onChange={e=>setZip(e.target.value.replace(/\D/g,''))} placeholder="42101, 42103, 42104, 42134, etc." autoComplete="postal-code" />
           </div>
+          <button type="button" className="schd feat compact" onClick={()=>setFreq('Weekly')}>
+            <span className="schd-tag"><Badge variant="ink">Recommended</Badge></span>
+            <Card tone="surface" elevation="sticker" bordered style={{padding:'10px 14px',...(freq==='Weekly'?{outline:'3px solid var(--dd-ink)',outlineOffset:2}:{})}}>
+              <span className="schd-t">Weekly Clean Yard Plan</span>
+              <span className="schd-d">Best for a consistently clean, usable yard with less buildup between visits.</span>
+              <span className="schd-go">Choose Weekly <i data-lucide="arrow-right" style={{width:16,height:16}}></i></span>
+            </Card>
+          </button>
+          <button type="button" className="schd compact" onClick={()=>setFreq('Biweekly')}>
+            <Card tone="surface" elevation="flat" style={{padding:'10px 14px',...(freq==='Biweekly'?{outline:'3px solid var(--dd-ink)',outlineOffset:2}:{})}}>
+              <span className="schd-t">Biweekly Clean Yard Plan</span>
+              <span className="schd-d">A lighter schedule for lower-use yards. Typically 1-2 dogs.</span>
+              <span className="schd-go">Choose Biweekly <i data-lucide="arrow-right" style={{width:16,height:16}}></i></span>
+            </Card>
+          </button>
           {err && <div className="err">{err}</div>}
-          <Button variant="ink" size="lg" block sticker type="submit" style={{marginTop:16}}
+          <Button variant="ink" size="lg" block sticker type="submit" style={{marginTop:10}}
             iconRight={<i data-lucide="arrow-right" style={{width:18,height:18}}></i>}>Check My Area</Button>
-          <p className="fineprint">Takes about 60 seconds · No card required</p>
+          <p className="fineprint" style={{margin:'8px 0 0'}}>Takes about 60 seconds · No card required</p>
         </form>
       )}
 
