@@ -474,7 +474,7 @@
   .sticky-cta.show { opacity:1; pointer-events:auto; transform:translateY(0); }
   .sticky-cta .lab { font-family:var(--font-display); text-transform:uppercase; color:#000; font-size:15px; line-height:1; white-space:nowrap; }
   .sticky-cta .lab small { display:block; font-family:var(--font-text); font-weight:700; font-size:11px; margin-top:3px; text-transform:none; }
-  @media (max-width:560px){ .sticky-cta { left:0; right:0; bottom:0; border-radius:0; border-width:2px 0 0 0; box-shadow:none; padding:10px 16px calc(10px + env(safe-area-inset-bottom)); justify-content:space-between; transform:translateY(100%); } .sticky-cta.show { transform:translateY(0); } .sticky-cta .lab small{ display:none; } }
+  @media (max-width:560px){ .sticky-cta { left:0; right:0; bottom:0; border-radius:0; border-width:2px 0 0 0; box-shadow:none; padding:6px 14px calc(6px + env(safe-area-inset-bottom)); justify-content:space-between; transform:translateY(100%); gap:8px; } .sticky-cta.show { transform:translateY(0); } .sticky-cta .lab{ font-size:12.5px; } .sticky-cta .lab small{ display:none; } .sticky-cta button{ padding:8px 16px!important; font-size:13px!important; } }
 
   .reveal { opacity:0; transform:translateY(22px); transition:opacity .6s var(--ease-out), transform .6s var(--ease-out); }
   .reveal.in { opacity:1; transform:none; }
@@ -484,9 +484,10 @@
     .hero h1{ font-size:clamp(34px,9vw,46px); }
     .hero-proof-row{ display:none; }
     .hero-form-badge{ display:none; }
-    .hero-owner-photo-wrap{ width:190px; margin:18px auto 0; }
-    .hero-owner-photo-wrap img{ height:220px; }
+    .hide-mobile{ display:none; }
     .qcard{ min-height:0; }
+    .app-root{ display:flex; flex-direction:column; }
+    .app-root>*:nth-child(1){ order:1; } .app-root>*:nth-child(2){ order:2; } .app-root>*:nth-child(3){ order:3; } .app-root>*:nth-child(4){ order:4; } .app-root>*:nth-child(5){ order:5; } .app-root>*:nth-child(6){ order:6; } .app-root>*:nth-child(13){ order:7; } .app-root>*:nth-child(9){ order:8; } .app-root>*:nth-child(7){ order:9; } .app-root>*:nth-child(8){ order:10; } .app-root>*:nth-child(10){ order:11; } .app-root>*:nth-child(11){ order:12; } .app-root>*:nth-child(12){ order:13; } .app-root>*:nth-child(14){ order:14; } .app-root>*:nth-child(15){ order:15; } .app-root>*:nth-child(16){ order:16; }
     .hero-grid{ gap:20px; }
     .steps,.rgrid{ grid-template-columns:1fr; }
     .pgrid{ grid-template-columns:1fr; }
@@ -628,7 +629,7 @@ function Hero(){
         <p className="eyebrow">TRUSTED IN 48+ YARDS EACH MONTH</p>
         <h1 className="display">Pooper Scooper Service</h1>
         <p className="sub">Bowling Green, KY and Surrounding Areas</p>
-        <div className="hero-owner-photo-wrap">
+        <div className="hero-owner-photo-wrap hide-mobile">
           <img src="assets/owner-sign-photo.jpg" alt="Ty, Dookie Dogs owner, with a yard sign" />
         </div>
         <div className="hero-cta-row">
@@ -962,7 +963,7 @@ function App(){
     const t = setTimeout(()=>els.forEach(show), 4000);
     return ()=>{ io.disconnect(); removeEventListener('scroll', onScroll); clearTimeout(t); };
   },[]);
-  return (<div>
+  return (<div className="app-root">
     <PromoBar /><Header /><Hero /><TrustStrip /><VideoSec /><Reviews /><Plans /><HowItWorks />
     <ServiceArea /><Process /><Guarantee /><FAQ /><Story /><Band /><Footer /><StickyCTA />
   </div>);
